@@ -14,26 +14,26 @@ struct ProductListView: View {
     
     var body: some View {
         NavigationView{
-            ZStack{
-                List{
-                    ForEach(vm.products,id:\.self){ product in
+            ZStack{ // Using ZStack to ember the list view in a view to use on appear on the parent view instead of the child view
+                List{ // List view to view the list of products in a scrollable format
+                    ForEach(vm.products,id:\.self){ product in // Looping through the list of products returned by the API call and stored in an array of type ProductType
                         ProductRow(productName: product.productName, productType: product.productType, price: product.price, tax: product.tax,urlString: product.image ?? "")
                     }
                     .listStyle(.plain)
                     .padding([.leading,.trailing],-20)
-                    .listRowSeparator(.hidden)
+                    .listRowSeparator(.hidden) // Hididng the seperator line because we're using a custom row cell
                     //.listRowInsets(EdgeInsets(top: 10, leading: -10, bottom: 10, trailing: -10))
                 }
                 .onAppear{
-                    Task{
+                    Task{ // Using Task because fetching is an async call/function
                         await vm.fetchProducts()
                     }
                 }
             }
             .navigationTitle("Products")
-            .toolbar(content: {
+            .toolbar(content: { // Adding an add button in the navigation tool bar as well that will present the AddProductView in a sheet for easier access to this screen as mentioned in the assignment pdf
                 Button {
-                    showAddProductView = true
+                    showAddProductView = true // show add view sheet
                 } label: {
                     Text("Add")
                         .padding()

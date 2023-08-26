@@ -40,7 +40,7 @@ struct ProductRow: View {
 //                            
 //                        }
 //                    }
-                    AsyncImage(url: URL(string: urlString)) { image in
+                    AsyncImage(url: URL(string: urlString)) { image in // Async Image to load from a url else use a default placeholder image
                         image
                             .resizable()
                             .clipShape(RoundedRectangle(cornerRadius: 20))
