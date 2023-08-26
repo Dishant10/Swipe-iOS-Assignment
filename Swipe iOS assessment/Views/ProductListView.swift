@@ -11,7 +11,7 @@ struct ProductListView: View {
     
     @StateObject var vm = NetworkManager()
     @State var showAddProductView = false
-    
+    @State var searchText = ""
     var body: some View {
         NavigationView{
             ZStack{ // Using ZStack to ember the list view in a view to use on appear on the parent view instead of the child view
@@ -23,6 +23,7 @@ struct ProductListView: View {
                     .padding([.leading,.trailing],-20)
                     .listRowSeparator(.hidden) // Hididng the seperator line because we're using a custom row cell
                     //.listRowInsets(EdgeInsets(top: 10, leading: -10, bottom: 10, trailing: -10))
+                    .searchable(text: $searchText)
                 }
                 .onAppear{
                     Task{ // Using Task because fetching is an async call/function

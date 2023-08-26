@@ -51,6 +51,7 @@ struct ProductRow: View {
                 }
                 .frame(width: 100,height: 100)
                 .padding([.leading])
+                .padding([.leading])
                 Spacer()
                 VStack(alignment:.leading){
                     Text("\(productName)")
@@ -59,13 +60,14 @@ struct ProductRow: View {
                     //.font(.title)
                     Text("\(productType)")
                         .lineLimit(1)
-                    Text("Price : \(price)")
+                    Text("Price : \(price.formatted())")
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
-                    Text("Tax : \(tax)")
+                    Text("Tax : \(tax.formatted()) %")
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                 }
+                .frame(width:150,height:150,alignment: .leading)
                 .padding(.trailing)
             }
             .padding([.top,.bottom])
@@ -73,6 +75,6 @@ struct ProductRow: View {
     }
 }
 
-#Preview {
-    ProductRow(productName: "iPhone", productType: "Smart Phone", price: 1000, tax: 13,urlString: "")
-}
+//#Preview {
+//    ProductRow(productName: "iPhone", productType: "Smart Phone", price: 1000, tax: 13,urlString: "")
+//}
