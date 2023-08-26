@@ -14,7 +14,7 @@ struct AddProductView: View {
     @State var productNameString = ""
     @State var productPriceDouble : Double = 0.0
     @State var productTaxDouble : Double = 0.0
-    @ObservedObject var vm = NetworkManager() // Network manager instance
+    @ObservedObject var vm = NetworkManager() // Network manager instance/object
 //    @State var showAlert : Bool = false
 //    @State var alertMessage : String = ""
     
@@ -66,7 +66,7 @@ struct AddProductView: View {
             }
             .navigationTitle("Add Products")
         }
-        .alert("POST Call Result", isPresented: $vm.showAlert) { // showing alert if the call is successful or it gave an error
+        .alert("POST Call Result", isPresented: $vm.showAlert) { // show alert if the call is successful or a failure
                         Button(role: .cancel) { // taking the binding bool from the network manager class
                             dismiss()
                         } label: {
@@ -80,7 +80,7 @@ struct AddProductView: View {
 //            })
             
         } message: {
-            Text("\(vm.alertMessage)") // Taking the alert message from the class as well accessing using the vm object of the network manager class
+            Text("\(vm.alertMessage)") // Taking the alert message from the class as well, accessing using the vm object of the network manager class
         }
     }
 }

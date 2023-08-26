@@ -19,8 +19,8 @@ struct ProductType : Codable,Hashable { // Swift type of the API response to con
         
         case image = "image"
         case price = "price"
-        case productName = "product_name" // changing this key
-        case productType = "product_type" // This key too.
+        case productName = "product_name" // changing product_name key because it returns as a snake case which is not prefered in swift syntax
+        case productType = "product_type" // product_type key too
         case tax = "tax"
         
     }

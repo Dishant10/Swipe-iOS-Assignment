@@ -14,9 +14,9 @@ struct ProductListView: View {
     @State var searchText = ""
     var body: some View {
         NavigationView{
-            ZStack{ // Using ZStack to ember the list view in a view to use on appear on the parent view instead of the child view
+            ZStack{ // Using ZStack to embed the list view in a view to use on appear on the parent view instead of the child view
                 List{ // List view to view the list of products in a scrollable format
-                    ForEach(vm.products,id:\.self){ product in // Looping through the list of products returned by the API call and stored in an array of type ProductType
+                    ForEach(vm.products,id:\.self){ product in // Looping through the list of products returned by the API call that is stored in an array of type ProductType
                         ProductRow(productName: product.productName, productType: product.productType, price: product.price, tax: product.tax,urlString: product.image ?? "")
                     }
                     .listStyle(.plain)

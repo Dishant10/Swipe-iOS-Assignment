@@ -118,7 +118,7 @@ final class NetworkManager : ObservableObject {
                 "Content-Type":"application/x-www-form-urlencoded; charset=UTF-8"] // sending using form-data as url encoded format
         
         AF.request(url,method: .post,parameters: body,encoding: URLEncoding.httpBody, headers: headers).responseJSON{response in // POST request call
-            switch response.result { // returns a result type which can be made up of success or failure and needs to handled accordingly
+            switch response.result { // returns a result type which can be up of type success or failure and needs to be handled accordingly
             case .success(let JSON):
                 self.showAlert.toggle()
                 self.alertMessage = "Successfully added the new product item" // show success alert message
