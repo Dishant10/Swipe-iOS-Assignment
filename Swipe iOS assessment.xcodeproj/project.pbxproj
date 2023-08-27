@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333A13452A9B4B6000265B0C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A13442A9B4B6000265B0C /* NetworkError.swift */; };
 		3385CEC62A99077F00BAA4F4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3385CEC52A99077F00BAA4F4 /* Alamofire */; };
 		33B489722A9533FB0075C7B6 /* Swipe_iOS_assessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B489712A9533FB0075C7B6 /* Swipe_iOS_assessmentApp.swift */; };
 		33B489742A9533FB0075C7B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B489732A9533FB0075C7B6 /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		333A13442A9B4B6000265B0C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		33B4896E2A9533FB0075C7B6 /* Swipe iOS assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swipe iOS assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B489712A9533FB0075C7B6 /* Swipe_iOS_assessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipe_iOS_assessmentApp.swift; sourceTree = "<group>"; };
 		33B489732A9533FB0075C7B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				33D8A0C42A97D92C00A79250 /* ProductType.swift */,
+				333A13442A9B4B6000265B0C /* NetworkError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33D8A0CB2A97E06E00A79250 /* ProductListView.swift in Sources */,
+				333A13452A9B4B6000265B0C /* NetworkError.swift in Sources */,
 				33D8A0C72A97DBDC00A79250 /* ProductRow.swift in Sources */,
 				33D8A0CD2A97E07800A79250 /* AddProductView.swift in Sources */,
 				33B489742A9533FB0075C7B6 /* ContentView.swift in Sources */,

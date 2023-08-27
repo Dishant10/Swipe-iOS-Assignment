@@ -9,14 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView{ // Using tab views for easier navigation between the two screens. It is proven that tab views are very intuitive.
+        TabView{                 // Using tab views for easier navigation between the two screens. It is proven that tab views are very intuitive.
             ProductListView()
                 .tabItem {
                     VStack{
                         Image(systemName: "bag.fill")
                         Text("Products")
                     }
-                    
                 }
             AddProductView()
                 .tabItem {

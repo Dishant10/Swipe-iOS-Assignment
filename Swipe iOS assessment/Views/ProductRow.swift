@@ -25,22 +25,22 @@ struct ProductRow: View {
                 ZStack{
                     RoundedRectangle(cornerRadius: 20)
                         .foregroundStyle(.gray)
-//                    AsyncImage(url: URL(string: urlString)){ phase in
-//                        switch phase {
-//                        case .empty :
-//                            ProgressView()
-//                        case .success(let image):
-//                            image
-//                                .resizable()
-//                                .clipShape(RoundedRectangle(cornerRadius: 20))
-//                        case .failure:
-//                            Image(systemName: "person.fill")
-//                        default :
-//                            Image(systemName: "person.fill")
-//                            
-//                        }
-//                    }
-                    AsyncImage(url: URL(string: urlString)) { image in // Async Image to load from a url else use a default placeholder image
+                    //                    AsyncImage(url: URL(string: urlString)){ phase in           //other way of using Async Image
+                    //                        switch phase {
+                    //                        case .empty :
+                    //                            ProgressView()
+                    //                        case .success(let image):
+                    //                            image
+                    //                                .resizable()
+                    //                                .clipShape(RoundedRectangle(cornerRadius: 20))
+                    //                        case .failure:
+                    //                            Image(systemName: "person.fill")
+                    //                        default :
+                    //                            Image(systemName: "person.fill")
+                    //
+                    //                        }
+                    //                    }
+                    AsyncImage(url: URL(string: urlString)) { image in            // Async Image to load from a url else use a default placeholder image
                         image
                             .resizable()
                             .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -57,7 +57,6 @@ struct ProductRow: View {
                     Text("\(productName)")
                         .fontWeight(.heavy)
                         .lineLimit(1)
-                    //.font(.title)
                     Text("\(productType)")
                         .lineLimit(1)
                     Text("Price : \(price.formatted())")
